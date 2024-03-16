@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { userController } from "./user/user.controller";
-import { log } from "console";
+import { verifyJWT } from "./utils/middlewares";
 
 const routerV1 = Router();
 
@@ -10,6 +10,7 @@ const routes = [
         route: new userController().router,
     },
 ];
+
 routes.forEach((route) => {
     routerV1.use(route.path, route.route);
 });
