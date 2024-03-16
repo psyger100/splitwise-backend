@@ -13,8 +13,8 @@ model User {
   name         String?
   password     String
   refreshToken String?
-  User_A       User[]  @relation("Friends")
-  User_B       User[]  @relation("Friends")
+  friends      User[]  @relation("Friends")
+  friendsOf    User[]  @relation("Friends")
   groups       Group[] @relation("GroupToUser")
 }
 

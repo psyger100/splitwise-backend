@@ -9,6 +9,6 @@ app.use(
         origin: "*",
     }),
 );
-app.use("/api/V1",routerV1);
+app.use("/api/V1", routerV1);
 
 export default app;
